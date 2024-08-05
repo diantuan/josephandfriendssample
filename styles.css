@@ -1,0 +1,285 @@
+@font-face {
+  font-family: Glamour;
+  src: url(Glamour.ttf);
+}
+html{
+  font-family: Glamour;
+  font-weight: bold;
+ 
+}
+:root{
+  --color-1:rgb(189,162,141);
+  --color-2:rgb(249,232,206);
+  --color-3:rgb(212,159,145);
+  --color-4:rgb(217,219,231);
+  --color-5:rgb(118,152,152);
+}
+body{
+  margin:0;
+  background-color:var(--color-4);
+}
+
+.hidden{
+  display:none;
+}
+
+header{
+  position:fixed;
+  box-sizing:border-box;
+  top:0;
+  background-color: var(--color-5);
+  width:100%;
+  height:85px;
+  padding: 20px 10px 5px 10px;
+  z-index: 3;
+}
+#header-container{
+ 
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+}
+
+#icons{
+position:absolute;
+right:30px;
+z-index:3;
+top:10px;
+display:flex;
+gap:20px;
+transform: scale(1.5);
+justify-content: space-around;
+
+}
+#icons span:hover{
+  color:var(--color-3);
+  cursor: pointer;
+}
+#icons a{
+  color:unset;
+}
+
+#call{
+  position:absolute;
+  top:2px;
+  right:140px;
+  font-size:12px;
+  width:300px;
+}
+
+@media (max-width:600px){
+  #call{
+    display:none;
+  }
+}
+
+
+#logo{
+  width:40%;
+  max-width:300px;
+  min-width:300px;
+  aspect-ratio: 642 / 133;
+  object-fit: cover;
+  transition-duration: .5s;
+  margin-bottom:10px;
+}
+#logo:hover{
+  opacity:70%;
+ 
+}
+
+.navigation-list{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  align-items:flex-end;
+  gap:10px;
+}
+
+.navigation-list li{
+  list-style:none;
+  margin:5px;
+  white-space:nowrap;
+  color:var(--color-2);
+  transition-duration:.5s;
+  position:relative;
+}
+
+.navigation-list a{
+  display:inline-block;
+  transition-duration: .5s;
+}
+.navigation-list a:hover{
+  
+  transform: scale(1.3);
+  color:var(--color-3);
+  cursor:pointer}
+
+
+.navigation-list li:hover .navdropdown{
+  display:block;
+}
+
+.navdropdown{
+  display:none;
+  background-color:var(--color-1);
+  border-radius:5px;
+  margin:auto;
+  position:absolute;
+  top:20px;
+  left:0;
+  padding:10px;
+  opacity:unset;
+  
+}
+
+.navdropdown li{
+  display:block;
+  width:100%;
+  list-style: none;
+  color:var(--color-2);
+  transition-duration:0s;
+  letter-spacing: 2px;
+  border-bottom:1px solid gray;
+}
+.navdropdown li:hover{
+  background-color:var(--color-5);
+  cursor:pointer;
+  border-radius: 5px;
+}
+.navdropdown li:active{
+  color:var(--color-3)
+}
+
+#book-now{
+  background-color: black;
+  padding:5px;
+  font-weight: bolder;
+  color:var(--color-5);
+  text-decoration: none;
+  border-radius: 5px;
+}
+#book-now:hover{
+  transform: unset;
+  background-color: whitesmoke;
+}
+
+
+
+#front{
+  margin-top:80px;
+  z-index:2;
+  position:relative;
+}
+#front-img{
+width:100%;
+filter:brightness(1.08);
+}
+
+
+
+.divider{
+  background-color:var(--color-1);
+  box-sizing:border-box;
+  height:3px;
+  margin:30px 0;
+  
+
+}
+
+#shop-aveda{
+  
+  width:100%;
+  position:relative;
+  
+}
+
+#shop-aveda video{
+  width:100%;
+}
+
+#shop-aveda a{
+  position:absolute;
+  left:0;
+  top:30%;
+  width:100%;
+  text-align: center;
+  text-decoration: none;
+  color:var(--color-2);
+  font-size: 1.5em;
+  display:inline-block;
+  z-index:2;
+}
+
+#shop-aveda a:hover{
+  background-color: var(--color-1);
+  border-radius:20px;
+  opacity:60%;
+}
+
+
+#gift-cards{
+  margin:auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#gift-cards img{
+  width:30%;
+  border-radius:10px;
+  box-shadow: 2px 2px 7px slategrey;
+  transition-duration:.5s;
+}
+#gift-cards img:hover{
+  filter:opacity(70%);
+  transform: scale(1.15);
+}
+
+#spa{
+  position: relative;
+}
+
+#spa a{
+  position:absolute;
+  left:0;
+  top:30%;
+  text-decoration: none;
+  color:var(--color-2);
+  font-size: 1.5em;
+  display:inline-block;
+  z-index:2;
+  width:100%;
+  text-align:center;
+}
+
+#spa a:hover{
+  background-color: var(--color-1);
+  border-radius:20px;
+  opacity:60%;
+}
+
+#spa img{
+  width:100%;
+  aspect-ratio: 3/1;
+  object-fit: cover;
+  max-height:300px;
+}
+
+#makeup{
+ display:flex;
+ gap:20px;
+ flex-wrap:wrap;
+ justify-content: space-around;
+}
+
+#makeup iframe{
+  border-radius: 20px;
+}
+
+
+footer{
+  text-align:center;
+  margin:20px
+}
